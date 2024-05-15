@@ -8,7 +8,7 @@
         </div>
         <hr class="my-0" />
         <div class="card-body">
-            <form id="formAccountSettings" method="POST" action="#">
+            <form id="formAccountSettings" method="POST" action="{{ route('data_lansia.store') }}">
                 @csrf
                 <div class="row">
                     <div class="mb-3 col-md-6">
@@ -17,7 +17,7 @@
                     </div>
                     <div class="mb-3 col-md-6">
                         <label for="firstName" class="form-label">Nama Pasien</label>
-                        <input class="form-control" type="text" id="firstName" name="nama_pasien" autofocus />
+                        <input class="form-control" type="text" id="firstName" name="nama" autofocus />
                     </div>
                     <div class="mb-3 col-md-6">
                         <label class="form-label" for="country">Jenis Kelamin</label>

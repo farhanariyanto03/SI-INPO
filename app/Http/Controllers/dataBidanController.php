@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class dataBidanController extends Controller
@@ -37,7 +38,7 @@ class dataBidanController extends Controller
             "role" => "required|max:5",
         ]);
 
-        user::create($validatedData);
+        User::create($validatedData);
 
         return redirect()->route("data_bidan.index");
     }

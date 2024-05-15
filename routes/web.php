@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\dataBidanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboardKaderController;
 use App\Http\Controllers\dataKaderController;
+use App\Http\Controllers\dataBidanController;
 use App\Http\Controllers\dataLansiaController;
 
 /*

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('data_lansias', function (Blueprint $table) {
-            $table->id('NIK');
+            $table->unsignedBigInteger('NIK')->primary();
             $table->string('nama', 30);
             $table->string('jenis_kelamin', 20);
             $table->text('alamat');
