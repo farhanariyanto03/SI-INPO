@@ -8,20 +8,20 @@
         </div>
         <hr class="my-0" />
         <div class="card-body">
-            <form id="formAccountSettings" method="POST" action="#">
+            <form id="formAccountSettings" method="POST" action="{{route("data_bidan.store")}}">
                 @csrf
                 <div class="row">
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">NIK</label>
-                        <input class="form-control" type="text" id="firstName" name="NIK" autofocus />
+                        <label for="firstName" class="form-label">Nama</label>
+                        <input class="form-control" type="text" id="firstName" name="nama" autofocus />
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">Nama Pasien</label>
-                        <input class="form-control" type="text" id="firstName" name="nama_pasien" autofocus />
+                        <label for="email" class="form-label">Email</label>
+                        <input class="form-control" type="text" id="email" name="email" autofocus />
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">Tanggal Lahir</label>
-                        <input class="form-control" type="date" id="firstName" name="tggl_lahir" autofocus />
+                        <label for="password" class="form-label">Password</label>
+                        <input class="form-control" type="text" id="password" name="password" autofocus />
                     </div>
                     <div class="mb-3 col-md-6">
                         <label class="form-label" for="country">Jenis Kelamin</label>
@@ -31,39 +31,22 @@
                             <option value="Perempuan">Perempuan</option>
                         </select>
                     </div>
-                    <div class="mb-3 col-md-6">
-                        <label class="form-label" for="country">Agama</label>
-                        <select id="country" class="select2 form-select" name="agama">
-                            <option value=""><-- Pilih Agama --></option>
-                            <option value="Islam">Islam</option>
-                            <option value="Kristen">Kristen</option>
-                            <option value="Khatolik">Khatolik</option>
-                            <option value="Hindu">Hindu</option>
-                            <option value="Budha">Budha</option>
-                            <option value="Konghucu">Konghucu</option>
-                        </select>
-                    </div>
-                    <div class="mb-3 col-md-6">
+                    {{-- <div class="mb-3 col-md-6">
                         <label class="form-label" for="country">Status</label>
                         <select id="country" class="select2 form-select" name="status">
                             <option value=""><-- Pilih Status --></option>
                             <option value="Belum Nikah">Belum Nikah</option>
                             <option value="Sudah Nikah">Sudah Nikah</option>
                         </select>
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">Pendidikan Terakhir</label>
-                        <input class="form-control" type="text" id="firstName" name="pendidikan_terakhir" autofocus />
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <label class="form-label" for="phoneNumber">Alamat</label>
-                        <div class="input-group input-group-merge">
-                            <input type="text" id="phoneNumber" name="alamat" class="form-control"/>
-                        </div>
-                    </div>
+                    </div> --}}
+
                     <div class="mb-3 col-md-6">
                         <label for="address" class="form-label">No HP</label>
                         <input type="text" class="form-control" id="address" name="no_hp" />
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="role" class="form-label">Role</label>
+                        <input class="form-control" type="text" id="role" name="role" autofocus />
                     </div>
                 </div>
                 <div class="mt-2">
