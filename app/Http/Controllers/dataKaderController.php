@@ -20,7 +20,7 @@ class dataKaderController extends Controller
      */
     public function create()
     {
-        //
+        return view('kader.data_kader.tambah');
     }
 
     /**
