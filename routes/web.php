@@ -4,7 +4,7 @@ use App\Http\Controllers\dataBidanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboardKaderController;
 use App\Http\Controllers\dataKaderController;
-
+use App\Http\Controllers\dataLansiaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +30,6 @@ Route::prefix('kader')->group(
         Route::get('/', [dashboardKaderController::class, 'index'])->name('dashboardKader.index');
         Route::resource('/data_kader', dataKaderController::class);
         Route::resource('/data_bidan', dataBidanController::class);
+        Route::resource('/data_lansia', dataLansiaController::class);
     }
 );

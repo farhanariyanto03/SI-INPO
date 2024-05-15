@@ -94,10 +94,10 @@
                     </li>
 
                     <!-- Data Pasien -->
-                    <li class="menu-item {{ Request::is('dokter/dataPasien') ? 'active' : '' }}">
-                        <a href="#" class="menu-link">
+                    <li class="menu-item {{ Request::is('kader/data_lansia') ? 'active' : '' }}">
+                        <a href="{{ route('data_lansia.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-user-plus"></i>
-                            <div data-i18n="Analytics">Data Pasien</div>
+                            <div data-i18n="Analytics">Data Lansia</div>
                         </a>
                     </li>
 
