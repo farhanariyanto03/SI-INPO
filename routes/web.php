@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\dashboardKaderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::prefix('kader')->group(
+    function () {
+        Route::get('/', function () {
+            return view('kader.layout');
+        });
+        Route::get('/', [dashboardKaderController::class, 'index'])->name('dashboardKader.index');
+    }
+);
