@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboardKaderController;
+use App\Http\Controllers\dataKaderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,6 @@ Route::prefix('kader')->group(
             return view('kader.layout');
         });
         Route::get('/', [dashboardKaderController::class, 'index'])->name('dashboardKader.index');
+        Route::resource('/data_kader', dataKaderController::class);
     }
 );

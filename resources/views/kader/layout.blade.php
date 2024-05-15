@@ -78,8 +78,8 @@
                     </li>
 
                     <!-- Data Dokter -->
-                    <li class="menu-item {{ Request::is('dokter/dataDokter') ? 'active' : '' }}">
-                        <a href="#" class="menu-link">
+                    <li class="menu-item {{ Request::is('kader/data_kader') ? 'active' : '' }}">
+                        <a href="{{route('data_kader.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-user"></i>
                             <div data-i18n="Analytics">Data Kader</div>
                         </a>
