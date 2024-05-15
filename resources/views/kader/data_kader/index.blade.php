@@ -34,7 +34,7 @@
                                         class="btn btn-icon btn-outline-warning">
                                         <i class='bx bxs-pencil'></i>
                                     </a>
-                                    {{-- <form action="{{ route('dataPasien.destroy', $pasien->NO_RM) }}" method="POST"
+                                    <form action="{{ route('data_kader.destroy',$kader->id) }}" method="POST"
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
@@ -42,7 +42,7 @@
                                             class="btn btn-icon btn-outline-danger" data-confirm-delete="true">
                                             <i class="bx bx-trash-alt"></i>
                                         </button>
-                                    </form> --}}
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

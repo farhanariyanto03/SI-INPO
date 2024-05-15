@@ -8,8 +8,9 @@
         </div>
         <hr class="my-0" />
         <div class="card-body">
-            <form id="formAccountSettings" method="POST" action="#">
+            <form id="formAccountSettings" method="POST" action="{{route('data_kader.update', $data->id)}}">
                 @csrf
+                @method('PUT')
                 <div class="row">
                     <div class="mb-3 col-md-6">
                         <label for="Nama pasien" class="form-label">Nama pasien</label>
