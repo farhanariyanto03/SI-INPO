@@ -86,8 +86,8 @@
                     </li>
 
                     <!-- Data Petugas -->
-                    <li class="menu-item {{ Request::is('dokter/dataPetugas') ? 'active' : '' }}">
-                        <a href="#" class="menu-link">
+                    <li class="menu-item {{ Request::is('kader/data_bidan') ? 'active' : '' }}">
+                        <a href="{{ route("data_bidan.index") }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-user"></i>
                             <div data-i18n="Analytics">Data Bidan</div>
                         </a>
