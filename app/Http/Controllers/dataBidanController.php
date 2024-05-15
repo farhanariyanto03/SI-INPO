@@ -12,7 +12,9 @@ class dataBidanController extends Controller
      */
     public function index()
     {
-        return view("kader.data_bidan.index");
+        return view("kader.data_bidan.index", [
+            "dataBidan"=> User::where("role", "bidan")->get()
+        ]);
     }
 
     /**
@@ -28,7 +30,7 @@ class dataBidanController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+
         $validatedData = $request->validate([
             "nama" => "required|max:30",
             "email" => "required|max:30",
@@ -56,7 +58,10 @@ class dataBidanController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data=User::where('id',$id)->first();
+        return view('kader.data_bidan.edit',[
+            'data' => $data
+        ]);
     }
 
     /**
