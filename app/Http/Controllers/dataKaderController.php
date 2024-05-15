@@ -13,7 +13,9 @@ class dataKaderController extends Controller
      */
     public function index()
     {
-        return view('kader.data_kader.index');
+        return view('kader.data_kader.index', [
+        'data_kader' => User::all()
+        ]);
     }
 
     /**
@@ -57,7 +59,11 @@ class dataKaderController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data=User::where('id',$id)->first();
+        return view('kader.data_kader.edit',[
+            'data' => $data
+        ]);
+
     }
 
     /**

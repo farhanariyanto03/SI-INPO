@@ -10,33 +10,31 @@
                 <table class="table table-hover large" id="myTable">
                     <thead>
                         <tr>
-                            <th>No RM</th>
                             <th>Nama Pasien</th>
                             <th>Jenis Kelamin</th>
-                            <th>Tangal Lahir</th>
-                            <th>Alamat</th>
+                            <th>Email</th>
+                            <th>Password</th>
                             <th>No HP</th>
+                            <th>Role</th>
                             <th>Action</th>
                         </tr>
                     </thead>
-                    {{-- <tbody class="table-border-bottom-0">
-                        @foreach ($data as $pasien)
+                    <tbody class="table-border-bottom-0">
+                        @foreach ($data_kader as $kader)
                             <tr>
+
+                                <td><?= $kader['nama'] ?></td>
+                                <td><?= $kader['jenis_kelamin'] ?></td>
+                                <td><?= $kader['email'] ?></td>
+                                <td><?= $kader['password'] ?></td>
+                                <td><?= $kader['no_hp'] ?></td>
+                                <td><?= $kader['role'] ?></td>
                                 <td>
-                                    <i class="fab fa-angular fa-lg text-danger me-3"></i>
-                                    <strong>{{ $pasien->NO_RM }}</strong>
-                                </td>
-                                <td><?= $pasien['nama_pasien'] ?></td>
-                                <td><?= $pasien['jenis_kelamin'] ?></td>
-                                <td><?= $pasien['tggl_lahir'] ?></td>
-                                <td><?= $pasien['alamat'] ?></td>
-                                <td><?= $pasien['no_hp'] ?></td>
-                                <td>
-                                    <a href="{{ route('dataPasien.edit', $pasien->NO_RM) }}"
+                                    <a href="{{route('data_kader.edit', $kader->id)}}"
                                         class="btn btn-icon btn-outline-warning">
                                         <i class='bx bxs-pencil'></i>
                                     </a>
-                                    <form action="{{ route('dataPasien.destroy', $pasien->NO_RM) }}" method="POST"
+                                    {{-- <form action="{{ route('dataPasien.destroy', $pasien->NO_RM) }}" method="POST"
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
@@ -44,11 +42,11 @@
                                             class="btn btn-icon btn-outline-danger" data-confirm-delete="true">
                                             <i class="bx bx-trash-alt"></i>
                                         </button>
-                                    </form>
+                                    </form> --}}
                                 </td>
                             </tr>
                         @endforeach
-                    </tbody> --}}
+                    </tbody>
                 </table>
             </div>
         </div>
