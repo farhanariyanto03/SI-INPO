@@ -8,12 +8,12 @@
         </div>
         <hr class="my-0" />
         <div class="card-body">
-            <form id="formAccountSettings" method="POST" action="{{route('data_kader.store')}}">
+            <form id="formAccountSettings" method="POST" action="#">
                 @csrf
                 <div class="row">
                     <div class="mb-3 col-md-6">
-                        <label for="Nama pasien" class="form-label">Nama Lengkap</label>
-                        <input class="form-control" type="text" id="Nama pasien" name="nama" autofocus />
+                        <label for="Nama pasien" class="form-label">Nama pasien</label>
+                        <input class="form-control" type="text" id="Nama pasien" name="nama_pasien" autofocus />
                     </div>
                     <div class="mb-3 col-md-6">
                         <label class="form-label" for="Jenis Kelamin">Jenis Kelamin</label>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="mt-2">
                     <button type="submit" class="btn btn-primary me-2">Simpan</button>
-                    <a href="/kader/data_kader" class="btn btn-outline-danger">Kembali</a>
+                    <a href="aowkaokwo" class="btn btn-outline-danger">Kembali</a>
                 </div>
             </form>
         </div>
