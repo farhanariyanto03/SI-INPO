@@ -14,7 +14,7 @@ class dataKaderController extends Controller
     public function index()
     {
         return view('kader.data_kader.index', [
-        'data_kader' => User::all()
+        'data_kader' => User::where('role','kader')->get()
         ]);
     }
 
