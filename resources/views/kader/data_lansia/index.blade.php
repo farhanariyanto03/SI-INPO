@@ -10,33 +10,28 @@
                 <table class="table table-hover large" id="myTable">
                     <thead>
                         <tr>
-                            <th>No RM</th>
-                            <th>Nama Pasien</th>
+                            <th>NIK</th>
+                            <th>Nama Lengkap</th>
                             <th>Jenis Kelamin</th>
-                            <th>Tangal Lahir</th>
                             <th>Alamat</th>
-                            <th>No HP</th>
+                            <th>Status Kesehatan</th>
                             <th>Action</th>
                         </tr>
                     </thead>
-                    {{-- <tbody class="table-border-bottom-0">
-                        @foreach ($data as $pasien)
+                    <tbody class="table-border-bottom-0">
+                        @foreach ($dataLansia as $data)
                             <tr>
+                                <td><?= $data['NIK'] ?></td>
+                                <td><?= $data['nama'] ?></td>
+                                <td><?= $data['jenis_kelamin'] ?></td>
+                                <td><?= $data['alamat'] ?></td>
+                                <td><?= $data['status_kesehatan'] ?></td>
                                 <td>
-                                    <i class="fab fa-angular fa-lg text-danger me-3"></i>
-                                    <strong>{{ $pasien->NO_RM }}</strong>
-                                </td>
-                                <td><?= $pasien['nama_pasien'] ?></td>
-                                <td><?= $pasien['jenis_kelamin'] ?></td>
-                                <td><?= $pasien['tggl_lahir'] ?></td>
-                                <td><?= $pasien['alamat'] ?></td>
-                                <td><?= $pasien['no_hp'] ?></td>
-                                <td>
-                                    <a href="{{ route('dataPasien.edit', $pasien->NO_RM) }}"
+                                    <a href="{{ route('data_lansia.edit', $data->NIK) }}"
                                         class="btn btn-icon btn-outline-warning">
                                         <i class='bx bxs-pencil'></i>
                                     </a>
-                                    <form action="{{ route('dataPasien.destroy', $pasien->NO_RM) }}" method="POST"
+                                    <form action="{{ route('data_lansia.destroy', $data->NIK) }}" method="POST"
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
@@ -48,7 +43,7 @@
                                 </td>
                             </tr>
                         @endforeach
-                    </tbody> --}}
+                    </tbody>
                 </table>
             </div>
         </div>

@@ -12,7 +12,9 @@ class dataLansiaController extends Controller
      */
     public function index()
     {
-        return view('kader.data_lansia.index');
+        return view('kader.data_lansia.index', [
+            'dataLansia' => Data_lansia::all()
+        ]);
     }
 
     /**
@@ -28,7 +30,6 @@ class dataLansiaController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
         $validatedData = $request->validate([
             'NIK' => 'required|max:16',
             'nama' => 'required|max:30',
@@ -55,7 +56,10 @@ class dataLansiaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = Data_lansia::where('NIK', $id)->first();
+        return view('kader.data_lansia.edit', [
+            'data' => $data
+        ]);
     }
 
     /**
@@ -63,7 +67,16 @@ class dataLansiaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validatedData = $request->validate([
+            'NIK' => 'required|max:16',
+            'nama' => 'required|max:30',
+            'jenis_kelamin' => 'required|max:20',
+            'alamat' => 'required|max:255',
+            'status_kesehatan' => 'required',
+        ]);
+
+        Data_lansia::where('NIK', $id)->update($validatedData);
+        return redirect()->route('data_lansia.index');
     }
 
     /**
@@ -71,6 +84,7 @@ class dataLansiaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Data_lansia::where('NIK', $id)->delete();
+        return redirect()->route('data_lansia.index');
     }
 }

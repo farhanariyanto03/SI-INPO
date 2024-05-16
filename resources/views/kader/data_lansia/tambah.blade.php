@@ -2,7 +2,7 @@
 @section('conten')
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="card mb-4">
-        <h5 class="card-header">Tambah Lansia</h5>
+        <h5 class="card-header">Tambah Data Lansia</h5>
         <!-- Account -->
         <div class="card-body">
         </div>
