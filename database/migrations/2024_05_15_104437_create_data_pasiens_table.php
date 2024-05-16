@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama', 30);
             $table->string('jenis_kelamin', 20);
             $table->text('alamat');
-            $table->string('status_kesehatan');
+            $table->string('no_hp');
             $table->timestamps();
         });
     }

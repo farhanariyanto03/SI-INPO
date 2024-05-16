@@ -36,8 +36,8 @@
                         </div>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="no_hp" class="form-label">No Hp</label>
-                        <input type="text" class="form-control" id="no_hp" name="no_hp" value="{{ $data->no_hp }}" />
+                        <label for="status_kesehatan" class="form-label">Status Kesehatan</label>
+                        <input type="text" class="form-control" id="status_kesehatan" name="status_kesehatan" value="{{ $data->status_kesehatan }}" />
                     </div>
                 </div>
                 <div class="mt-2">

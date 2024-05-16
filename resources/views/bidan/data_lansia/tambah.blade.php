@@ -34,8 +34,8 @@
                         </div>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="address" class="form-label">No HP</label>
-                        <input type="text" class="form-control" id="address" name="no_hp" />
+                        <label for="address" class="form-label">Status Kesehatan</label>
+                        <input type="text" class="form-control" id="address" name="status_kesehatan" />
                     </div>
                 </div>
                 <div class="mt-2">

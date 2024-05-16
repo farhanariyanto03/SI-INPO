@@ -14,7 +14,7 @@
                             <th>Nama Lengkap</th>
                             <th>Jenis Kelamin</th>
                             <th>Alamat</th>
-                            <th>No HP</th>
+                            <th>Status Kesehatan</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -25,7 +25,7 @@
                                 <td><?= $data['nama'] ?></td>
                                 <td><?= $data['jenis_kelamin'] ?></td>
                                 <td><?= $data['alamat'] ?></td>
-                                <td><?= $data['no_hp'] ?></td>
+                                <td><?= $data['status_kesehatan'] ?></td>
                                 <td>
                                     <a href="{{ route('data_lansia.edit', $data->NIK) }}"
                                         class="btn btn-icon btn-outline-warning">

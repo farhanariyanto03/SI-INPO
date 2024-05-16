@@ -35,7 +35,7 @@ class dataLansiaController extends Controller
             'nama' => 'required|max:30',
             'jenis_kelamin' => 'required|max:20',
             'alamat' => 'required|max:255',
-            'status_kesehatan' => 'required',
+            'no_hp' => 'required',
         ]);
 
         Data_lansia::create($validatedData);
@@ -72,7 +72,7 @@ class dataLansiaController extends Controller
             'nama' => 'required|max:30',
             'jenis_kelamin' => 'required|max:20',
             'alamat' => 'required|max:255',
-            'status_kesehatan' => 'required',
+            'no_hp' => 'required',
         ]);
 
         Data_lansia::where('NIK', $id)->update($validatedData);
