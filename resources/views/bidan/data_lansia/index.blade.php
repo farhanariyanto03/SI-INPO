@@ -18,7 +18,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody class="table-border-bottom-0">
+                    {{-- <tbody class="table-border-bottom-0">
                         @foreach ($dataLansia as $data)
                             <tr>
                                 <td><?= $data['NIK'] ?></td>
@@ -43,7 +43,7 @@
                                 </td>
                             </tr>
                         @endforeach
-                    </tbody>
+                    </tbody> --}}
                 </table>
             </div>
         </div>

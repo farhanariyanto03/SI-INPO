@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\dashboardBidanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboardKaderController;
 use App\Http\Controllers\dataKaderController;
@@ -31,5 +32,14 @@ Route::prefix('kader')->group(
         Route::resource('/data_kader', dataKaderController::class);
         Route::resource('/data_bidan', dataBidanController::class);
         Route::resource('/data_lansia', dataLansiaController::class);
+    }
+);
+
+Route::prefix('bidan')->group(
+    function () {
+        Route::get('/', function () {
+            return view('bidan.layout');
+        });
+        Route::get('/', [dashboardBidanController::class, 'index'])->name('dashboardBidan.index');
     }
 );

@@ -80,32 +80,8 @@
                     <!-- Data Dokter -->
                     <li class="menu-item {{ Request::is('kader/data_kader') ? 'active' : '' }}">
                         <a href="{{route('data_kader.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-user"></i>
-                            <div data-i18n="Analytics">Data Kader</div>
-                        </a>
-                    </li>
-
-                    <!-- Data Petugas -->
-                    <li class="menu-item {{ Request::is('kader/data_bidan') ? 'active' : '' }}">
-                        <a href="{{ route("data_bidan.index") }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-user"></i>
-                            <div data-i18n="Analytics">Data Bidan</div>
-                        </a>
-                    </li>
-
-                    <!-- Data Pasien -->
-                    <li class="menu-item {{ Request::is('kader/data_lansia') ? 'active' : '' }}">
-                        <a href="{{ route('data_lansia.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-user-plus"></i>
-                            <div data-i18n="Analytics">Data Lansia</div>
-                        </a>
-                    </li>
-
-                    <!-- Data Pasien -->
-                    <li class="menu-item {{ Request::is('dokter/dataPasien') ? 'active' : '' }}">
-                        <a href="#" class="menu-link">
                             <i class="menu-icon tf-icon bx bx-clinic"></i>
-                            <div data-i18n="Analytics">Laporan Pemeriksaan</div>
+                            <div data-i18n="Analytics">Pemeriksaan</div>
                         </a>
                     </li>
                 </ul>
