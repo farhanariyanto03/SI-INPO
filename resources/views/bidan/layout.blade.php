@@ -70,16 +70,16 @@
 
                 <ul class="menu-inner py-1">
                     <!-- Dashboard -->
-                    <li class="menu-item {{ Request::is('kader') ? 'active' : '' }}">
-                        <a href="{{ route('dashboardKader.index') }}" class="menu-link">
+                    <li class="menu-item {{ Request::is('bidan') ? 'active' : '' }}">
+                        <a href="{{ route('dashboardBidan.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Dashboard</div>
                         </a>
                     </li>
 
                     <!-- Data Dokter -->
-                    <li class="menu-item {{ Request::is('kader/data_kader') ? 'active' : '' }}">
-                        <a href="{{route('data_kader.index') }}" class="menu-link">
+                    <li class="menu-item {{ Request::is('bidan/pemeriksaan') ? 'active' : '' }}">
+                        <a href="{{route('pemeriksaan.index') }}" class="menu-link">
                             <i class="menu-icon tf-icon bx bx-clinic"></i>
                             <div data-i18n="Analytics">Pemeriksaan</div>
                         </a>

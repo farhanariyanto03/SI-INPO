@@ -102,8 +102,8 @@
                     </li>
 
                     <!-- Data Pasien -->
-                    <li class="menu-item {{ Request::is('dokter/dataPasien') ? 'active' : '' }}">
-                        <a href="#" class="menu-link">
+                    <li class="menu-item {{ Request::is('kader/laporanPemeriksaan') ? 'active' : '' }}">
+                        <a href="{{ route('laporanPemeriksaan.index') }}" class="menu-link">
                             <i class="menu-icon tf-icon bx bx-clinic"></i>
                             <div data-i18n="Analytics">Laporan Pemeriksaan</div>
                         </a>

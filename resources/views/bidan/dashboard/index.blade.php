@@ -1,4 +1,4 @@
-@extends('kader.layout')
+@extends('bidan.layout')
 
 @section('conten')
     <div class="col-lg-12 mb-4 order-0">
