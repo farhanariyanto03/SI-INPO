@@ -40,6 +40,7 @@ class dataBidanController extends Controller
             "role" => "required|max:5",
         ]);
 
+        $validatedData['password'] = bcrypt($validatedData['password']);
         User::create($validatedData);
 
         return redirect()->route("data_bidan.index");
@@ -69,7 +70,18 @@ class dataBidanController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validatedData = $request->validate([
+            "nama" => "required|max:30",
+            "email" => "required|max:30",
+            // "password" => "required|max:8",
+            "jenis_kelamin" => "required|max:20",
+            "no_hp" => "required|max:13",
+            "role" => "required|max:5",
+        ]);
+
+        // $validatedData['password'] = bcrypt($validatedData['password']);
+        User::findOrFail($id)->update($validatedData);
+        return redirect()->route('data_bidan.index');
     }
 
     /**
@@ -77,6 +89,7 @@ class dataBidanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        User::where('id', $id)->delete();
+        return redirect()->route('data_bidan.index');
     }
 }

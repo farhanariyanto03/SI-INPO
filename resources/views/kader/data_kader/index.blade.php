@@ -13,7 +13,7 @@
                             <th>Nama Pasien</th>
                             <th>Jenis Kelamin</th>
                             <th>Email</th>
-                            <th>Password</th>
+                            {{-- <th>Password</th> --}}
                             <th>No HP</th>
                             <th>Role</th>
                             <th>Action</th>
@@ -22,11 +22,10 @@
                     <tbody class="table-border-bottom-0">
                         @foreach ($data_kader as $kader)
                             <tr>
-
                                 <td><?= $kader['nama'] ?></td>
                                 <td><?= $kader['jenis_kelamin'] ?></td>
                                 <td><?= $kader['email'] ?></td>
-                                <td><?= $kader['password'] ?></td>
+                                {{-- <td>{{ $kader->getOriginal('password') }}</td> --}}
                                 <td><?= $kader['no_hp'] ?></td>
                                 <td><?= $kader['role'] ?></td>
                                 <td>

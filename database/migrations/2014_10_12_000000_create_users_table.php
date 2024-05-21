@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama', 30);
             $table->string('jenis_kelamin', 20);
             $table->string('email', 30)->unique();
-            $table->string('password', 8);
+            $table->string('password', 60);
             $table->char('no_hp', 13);
             $table->string('role', 5);
             $table->rememberToken();

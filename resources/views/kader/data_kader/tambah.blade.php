@@ -36,9 +36,8 @@
                         <input type="text" class="form-control" id="No Hp" name="no_hp" />
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label class="form-label" for="Role">Role</label>
                         <div class="input-group input-group-merge">
-                            <input type="text" id="Role" name="role" class="form-control"/>
+                            <input type="hidden" id="Role" name="role" value="kader" class="form-control"/>
                         </div>
                     </div>
                 </div>

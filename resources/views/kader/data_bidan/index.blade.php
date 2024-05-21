@@ -3,7 +3,7 @@
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="card">
         <div class="p-3">
-            <a href="{{ route("data_bidan.create") }}" class="btn btn-primary col-2"> + Kader</a>
+            <a href="{{ route("data_bidan.create") }}" class="btn btn-primary col-2"> + Bidan</a>
         </div>
         <div class="col-md-6e p-1">
             <div class="card-body bg-white p-2" style="border-radius: 18px;">
@@ -12,7 +12,7 @@
                         <tr>
                             <th>Nama</th>
                             <th>Email</th>
-                            <th>Password</th>
+                            {{-- <th>Password</th> --}}
                             <th>Jenis Kelamin</th>
                             <th>No HP</th>
                             <th>Role</th>
@@ -26,7 +26,7 @@
 
                                 <td><?= $bidan['nama'] ?></td>
                                 <td><?= $bidan['email'] ?></td>
-                                <td><?= $bidan['password'] ?></td>
+                                {{-- <td><?= $bidan['password'] ?></td> --}}
                                 <td><?= $bidan['jenis_kelamin'] ?></td>
                                 <td><?= $bidan['no_hp'] ?></td>
                                 <td><?= $bidan['role'] ?></td>
@@ -35,14 +35,14 @@
                                         class="btn btn-icon btn-outline-warning">
                                         <i class='bx bxs-pencil'></i>
                                     </a>
-                                    {{-- <form action="{{ route('dataPasien.destroy', $pasien->NO_RM) }}" method="POST"
+                                    <form action="{{ route('data_bidan.destroy', $bidan->id) }}" method="POST"
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
                                         <button id="confirmDelete" type="submit"
                                             class="btn btn-icon btn-outline-danger" data-confirm-delete="true">
                                             <i class="bx bx-trash-alt"></i>
-                                        </button> --}}
+                                        </button>
                                     </form>
                                 </td>
                             </tr>

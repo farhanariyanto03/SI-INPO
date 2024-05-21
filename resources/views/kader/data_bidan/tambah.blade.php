@@ -2,7 +2,7 @@
 @section('conten')
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="card mb-4">
-        <h5 class="card-header">Tambah Pasien</h5>
+        <h5 class="card-header">Tambah Bidan</h5>
         <!-- Account -->
         <div class="card-body">
         </div>
@@ -45,13 +45,12 @@
                         <input type="text" class="form-control" id="address" name="no_hp" />
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="role" class="form-label">Role</label>
-                        <input class="form-control" type="text" id="role" name="role" autofocus />
+                        <input class="form-control" type="hidden" id="role" name="role" value="bidan" autofocus />
                     </div>
                 </div>
                 <div class="mt-2">
                     <button type="submit" class="btn btn-primary me-2">Simpan</button>
-                    <a href="#" class="btn btn-outline-danger">Kembali</a>
+                    <a href="{{ route('data_bidan.index') }}" class="btn btn-outline-danger">Kembali</a>
                 </div>
             </form>
         </div>

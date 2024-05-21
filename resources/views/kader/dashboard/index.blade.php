@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <span class="fw-semibold d-block mb-1">Lansia</span>
-                    <h3 class="card-title mb-2">$12,628</h3>
+                    <h3 class="card-title mb-2">{{ $jumlahLansia }}</h3>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <span class="fw-semibold d-block mb-1">Sudah Diperiksa</span>
-                    <h3 class="card-title mb-2">$12,628</h3>
+                    <h3 class="card-title mb-2">{{ $jumlahPeriksa }}</h3>
                 </div>
             </div>
         </div>
